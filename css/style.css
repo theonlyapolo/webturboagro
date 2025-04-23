@@ -1,0 +1,349 @@
+/* Estilos personalizados para o TurboAgro Admin */
+
+:root {
+  --primary-blue: #0066CC;
+  --primary-green: #00CC66;
+  --dark-blue: #1a3a5f;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --text-dark: #343a40;
+  --text-muted: #6c757d;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --success: #28a745;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+  height: calc(100vh);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.75rem 1rem;
+  margin: 0.2rem 0;
+  border-radius: 0.25rem;
+}
+
+.sidebar .nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .nav-link i {
+  margin-right: 0.5rem;
+}
+
+.sidebar-brand {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--dark-blue);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-brand img {
+  max-height: 40px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid var(--medium-gray);
+  font-weight: 600;
+}
+
+.card-stats {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.card-stats .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+}
+
+.card-stats .number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-stats .label {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-success {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.btn-success:hover {
+  background-color: #00b359;
+  border-color: #00b359;
+}
+
+/* Tabelas */
+.table thead th {
+  border-top: none;
+  border-bottom: 2px solid var(--primary-blue);
+  font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 102, 204, 0.05);
+}
+
+/* Formulários */
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+/* Badges */
+.badge-primary {
+  background-color: var(--primary-blue);
+}
+
+.badge-success {
+  background-color: var(--primary-green);
+}
+
+/* Equipe */
+.team-member {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.team-member h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.team-member p {
+  color: var(--text-muted);
+}
+
+/* Planos de preços */
+.pricing-card {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.pricing-card .period {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.pricing-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.pricing-card ul li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary-green);
+  transform: scale(1.05);
+}
+
+.pricing-card.featured .card-header {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: static;
+    height: auto;
+    padding-bottom: 0;
+  }
+  
+  .sidebar-sticky {
+    height: auto;
+  }
+  
+  .content {
+    margin-left: 0 !important;
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Dashboard específico */
+.dashboard-stat {
+  border-left: 4px solid var(--primary-blue);
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.dashboard-stat:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-stat.green {
+  border-left-color: var(--primary-green);
+}
+
+.dashboard-stat.warning {
+  border-left-color: var(--warning);
+}
+
+.dashboard-stat.danger {
+  border-left-color: var(--danger);
+}
+
+.dashboard-stat .stat-title {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-stat .stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.dashboard-stat .stat-icon {
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+/* Perfil */
+.profile-header {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Loader */
+.loader {
+  border: 5px solid var(--medium-gray);
+  border-top: 5px solid var(--primary-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

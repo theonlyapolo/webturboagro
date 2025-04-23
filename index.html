@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TurboAgro</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="sidebar-sticky">
+                    <div class="sidebar-brand">
+                        <a href="index.html">
+                            <img src="img/logo.jpeg" alt="TurboAgro Logo" class="img-fluid">
+                        </a>
+                    </div>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/users/index.html">
+                                <i class="bi bi-people"></i> Gestão de Usuários
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/profile/index.html">
+                                <i class="bi bi-person-circle"></i> Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <a class="nav-link" href="public/index.html" target="_blank">
+                                <i class="bi bi-house"></i> Site Público
+                            </a>
+                        </li>
+                        <li class="nav-item mt-5">
+                            <a class="nav-link text-danger" href="login.html">
+                                <i class="bi bi-box-arrow-right"></i> Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white px-3 py-2 rounded shadow-sm mb-4">
+                    <button class="navbar-toggler d-md-none" type="button" onclick="toggleSidebar()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <span class="navbar-brand mb-0 h1 d-none d-md-block">Dashboard</span>
+                    <div class="ms-auto d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    3
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Nova análise concluída</a></li>
+                                <li><a class="dropdown-item" href="#">Novo usuário cadastrado</a></li>
+                                <li><a class="dropdown-item" href="#">Atualização do sistema</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown ms-3">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://via.placeholder.com/40" class="rounded-circle me-2" alt="Avatar">
+                                <span>João Silva</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="pages/profile/index.html">Meu Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="login.html">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="h2 mb-4">Painel de Controle</h1>
+                    </div>
+                </div>
+
+                <!-- Cards de estatísticas -->
+                <div class="row">
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Total de Fazendas</div>
+                                    <h3 class="stat-value">1.250</h3>
+                                </div>
+                                <i class="bi bi-house stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat green">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Total de Usuários</div>
+                                    <h3 class="stat-value">3.000</h3>
+                                </div>
+                                <i class="bi bi-people stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Relatórios Emitidos</div>
+                                    <h3 class="stat-value">18.750</h3>
+                                </div>
+                                <i class="bi bi-file-earmark-text stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat green">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Média de pH dos Solos</div>
+                                    <h3 class="stat-value">5.7</h3>
+                                </div>
+                                <i class="bi bi-droplet stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat warning">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Níveis Críticos de Nutrientes</div>
+                                    <h3 class="stat-value">8%</h3>
+                                </div>
+                                <i class="bi bi-exclamation-triangle stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-2">
+                        <div class="dashboard-stat danger">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stat-title">Tempo Médio de Análise</div>
+                                    <h3 class="stat-value">90s</h3>
+                                </div>
+                                <i class="bi bi-clock stat-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráficos -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Relatórios Gerados</h5>
+                            </div>
+                            <div class="card-body">
+                                <div style="height: 300px;">
+                                    <canvas id="relatoriosMensaisChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Análises por Tipo de Solo</h5>
+                            </div>
+                            <div class="card-body">
+                                <div style="height: 300px;">
+                                    <canvas id="tiposSoloChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atividades recentes e tecnologia microfluidica -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Atividades Recentes</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-0">Nova análise de solo concluída</h6>
+                                                <small class="text-muted">Fazenda Esperança - Café Arábica</small>
+                                            </div>
+                                            <span class="badge bg-success">Agora</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-0">Usuário adicionado</h6>
+                                                <small class="text-muted">Maria Oliveira (maria@email.com)</small>
+                                            </div>
+                                            <span class="badge bg-primary">2h atrás</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-0">Alerta de nutrientes</h6>
+                                                <small class="text-muted">Níveis baixos de potássio detectados</small>
+                                            </div>
+                                            <span class="badge bg-warning text-dark">5h atrás</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-0">Atualização do sistema</h6>
+                                                <small class="text-muted">Nova versão 2.3.1 instalada</small>
+                                            </div>
+                                            <span class="badge bg-info">1d atrás</span>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mb-0">Relatório mensal gerado</h6>
+                                                <small class="text-muted">Abril/2025 - 30 análises</small>
+                                            </div>
+                                            <span class="badge bg-secondary">2d atrás</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Nossa Tecnologia Microfluidica</h5>
+                            </div>
+                            <div class="card-body text-center">
+                                <img src="img/microfluidic.png" alt="Etiqueta Microfluidica" class="img-fluid mb-3" style="max-height: 200px;">
+                                <h5>Análise Rápida e Precisa</h5>
+                                <p class="text-muted">
+                                    Nossa tecnologia microfluidica permite análises de solo em apenas 90 segundos, 
+                                    oferecendo resultados precisos para otimizar suas decisões agrícolas.
+                                </p>
+                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="bg-white rounded shadow p-3 mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-0 text-muted">
+                                &copy; 2025 TurboAgro. Todos os direitos reservados.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Termos de Uso</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Privacidade</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Suporte</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
