@@ -18,7 +18,21 @@ body {
   background-color: var(--light-gray);
   color: var(--text-dark);
 }
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* mantém proporção sem esticar */
+  border-radius: 50%; /* garante o formato circular */
+}
 
+.nav-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover; /* mantém a proporção sem distorcer */
+}
+.nav-avatar.rounded {
+  border-radius: 50%;
+}
 /* Sidebar */
 .sidebar {
   position: fixed;

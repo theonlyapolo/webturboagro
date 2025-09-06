@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            background-color: #f8f9fa;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    background-color: #f8f9fa;
+    min-height: 100vh; /* permite crescer além da altura da tela */
+    display: flex;
+    flex-direction: column; /* organiza em coluna */
+    align-items: center;
+    justify-content: flex-start; /* começa do topo */
+    padding: 2rem 0; /* dá espaçamento */
+}
+
         .login-container {
             max-width: 400px;
             width: 100%;
