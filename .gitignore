@@ -1,0 +1,59 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+coverage/
+
+# Environment files
+.env
+.env.*.local
+
+# VS Code settings
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# SvelteKit
+.svelte-kit/
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# Remix
+.build/
+
+# Storybook
+.storybook-out/
+
+# Misc
+*.tgz
+*.zip
+*.tar.gz
+.idea/
+*.sublime-workspace
+*.sublime-project
