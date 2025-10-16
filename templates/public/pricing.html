@@ -12,14 +12,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40">
+            <a class="navbar-brand" href="{{url_for('inicio')}}">
+                <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,20 +27,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Início</a>
+                        <a class="nav-link" href="{{url_for('inicio')}}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="pricing.html">Planos e Preços</a>
+                        <a class="nav-link active" href="{{url_for('precos')}}">Planos e Preços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="team.html">Nossa Equipe</a>
+                        <a class="nav-link" href="{{url_for('equipe')}}">Nossa Equipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contato</a>
+                        <a class="nav-link" href="{{url_for('contact')}}">Contato</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="../login.html" class="btn btn-primary">Entrar</a>
+                    <a href="{{url_for('login')}}" class="btn btn-primary">Entrar</a>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                             </ul>
                         </div>
                         <div class="card-footer text-center py-3">
-                            <a href="contact.html" class="btn btn-lg btn-outline-primary">Selecionar Plano</a>
+                            <a href="{{url_for('contact')}}" class="btn btn-lg btn-outline-primary">Selecionar Plano</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                             </ul>
                         </div>
                         <div class="card-footer text-center py-3">
-                            <a href="contact.html" class="btn btn-lg btn-success">Selecionar Plano</a>
+                            <a href="{{url_for('contact')}}" class="btn btn-lg btn-success">Selecionar Plano</a>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                             </ul>
                         </div>
                         <div class="card-footer text-center py-3">
-                            <a href="contact.html" class="btn btn-lg btn-outline-primary">Selecionar Plano</a>
+                            <a href="{{url_for('contact')}}" class="btn btn-lg btn-outline-primary">Selecionar Plano</a>
                         </div>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                             <p class="mb-md-0">Se você tem necessidades específicas ou gerencia múltiplas propriedades, entre em contato com nossa equipe de vendas para criar um plano sob medida para sua operação.</p>
                         </div>
                         <div class="col-md-4 text-md-end">
-                            <a href="contact.html" class="btn btn-primary">Fale com um Consultor</a>
+                            <a href="{{url_for('contact')}}" class="btn btn-primary">Fale com um Consultor</a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-4 mb-lg-0">
-                    <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40" class="mb-3">
+                    <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40" class="mb-3">
                     <p class="text-muted">Análise de solo inteligente para otimizar sua produção de café, pimenta e cacau.</p>
                     <div class="social-icons">
                         <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
@@ -259,11 +259,11 @@
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-muted">Início</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-muted">Planos e Preços</a></li>
-                        <li class="mb-2"><a href="team.html" class="text-muted">Nossa Equipe</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted">Contato</a></li>
-                        <li><a href="../login.html" class="text-muted">Entrar</a></li>
+                        <li class="mb-2"><a href="{{url_for('inicio')}}" class="text-muted">Início</a></li>
+                        <li class="mb-2"><a href="{{url_for('precos')}}" class="text-muted">Planos e Preços</a></li>
+                        <li class="mb-2"><a href="{{url_for('equipe')}}" class="text-muted">Nossa Equipe</a></li>
+                        <li class="mb-2"><a href="{{url_for('contact')}}" class="text-muted">Contato</a></li>
+                        <li><a href="{{url_for('login')}}" class="text-muted">Entrar</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4 mb-lg-0">

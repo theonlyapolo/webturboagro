@@ -12,14 +12,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40">
+            <a class="navbar-brand" href="{{url_for('inicio')}}">
+                <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,20 +27,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Início</a>
+                        <a class="nav-link" href="{{url_for('inicio')}}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Planos e Preços</a>
+                        <a class="nav-link" href="{{url_for('precos')}}">Planos e Preços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="team.html">Nossa Equipe</a>
+                        <a class="nav-link active" href="{{url_for('equipe')}}">Nossa Equipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contato</a>
+                        <a class="nav-link" href="{{url_for('contact')}}">Contato</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="../login.html" class="btn btn-primary">Entrar</a>
+                    <a href="{{url_for('login')}}" class="btn btn-primary">Entrar</a>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                             <p>Com anos de experiência no setor agrícola e tecnológico, desenvolvemos a tecnologia microfluidica que permite análises em 3 minutos, ajudando produtores a tomarem decisões mais informadas para suas lavouras.</p>
                         </div>
                         <div class="col-md-6 text-center">
-                            <img src="img/microfluidic.png" alt="Tecnologia Microfluidica" class="img-fluid rounded" style="max-height: 250px;">
+                            <img src="{{url_for('static', filename='img/microfluidic.png')}}" alt="Tecnologia Microfluidica" class="img-fluid rounded" style="max-height: 250px;">
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                 <div class="col-md-4">
                     <div class="card team-member h-100">
                         <div class="card-body text-center">
-                            <img src="/public/img/apolo.jpg" alt="Apolo" class="mb-3">
+                            <img src="{{url_for('static', filename='img/apolo.jpg')}}" alt="Apolo" class="mb-3">
                             <h4>Apolo</h4>
                             <p class="text-muted">Desenvolvedor de Software</p>
                             <p>Desenvolvedor Backend com domínio intermediário em Frontend. Sua principal linguagem é Python, mas atualmente Está expandindo seus conhecimentos com C#. Tem como foco o desenvolvimento de softwares, com uma base sólida em desenvolvimento web. Um dos seus maiores diferenciais é a facilidade em ler códigos como se fossem livros, o que ajuda a compreender e solucionar problemas com rapidez e eficiência.</p>
@@ -108,7 +108,7 @@
                 <div class="col-md-4">
                     <div class="card team-member h-100">
                         <div class="card-body text-center">
-                            <img src="/public/img/alice.jpg" alt="Alice" class="mb-3">
+                            <img src="{{url_for('static', filename='img/alice.jpg')}}" alt="Alice" class="mb-3">
                             <h4>Alice</h4>
                             <p class="text-muted">Desenhista Cadista</p>
                             <p>Domínio em Desenho Técnico e Resistência dos Materiais. Um dos seus maiores diferenciais é a sua lucidez quando se trata de resolução de problemas e a facilidade no domínio de conteúdo, o que torna os problemas mais claros, objetivos e solucionáveis.</p>
@@ -125,7 +125,7 @@
                 <div class="col-md-4">
                     <div class="card team-member h-100">
                         <div class="card-body text-center">
-                            <img src="/public/img/leonardo.jpg" alt="Leonardo" class="mb-3">
+                            <img src="{{url_for('static', filename='img/leonardo.jpg')}}" alt="Leonardo" class="mb-3">
                             <h4>Leonardo</h4>
                             <p class="text-muted">Gerente de Produto</p>
                             <p>Tem experiência na área de fabricação mecânica, com atuação em montagem e alinhamento de conjuntos rotativos, soldagem industrial, além de conhecimentos em sistemas hidráulicos e pneumáticos. Sua especialidade é o planejamento e controle da manutenção, sempre buscando eficiência, segurança e confiabilidade nos processos industriais.</p>
@@ -184,8 +184,8 @@
                     <h2 class="fw-bold mb-4">Pronto para trabalhar com os melhores?</h2>
                     <p class="lead mb-4">Nossa equipe está pronta para ajudar você a otimizar sua produção agrícola.</p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a href="contact.html" class="btn btn-light btn-lg px-4 me-sm-3">Entre em Contato</a>
-                        <a href="pricing.html" class="btn btn-outline-light btn-lg px-4">Ver Planos</a>
+                        <a href="{{url_for('contact')}}" class="btn btn-light btn-lg px-4 me-sm-3">Entre em Contato</a>
+                        <a href="{{url_for('precos')}}" class="btn btn-outline-light btn-lg px-4">Ver Planos</a>
                     </div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-4 mb-lg-0">
-                    <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40" class="mb-3">
+                    <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40" class="mb-3">
                     <p class="text-muted">Análise de solo inteligente para otimizar sua lavoura.</p>
                     <div class="social-icons">
                         <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
@@ -209,11 +209,11 @@
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-muted">Início</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-muted">Planos e Preços</a></li>
-                        <li class="mb-2"><a href="team.html" class="text-muted">Nossa Equipe</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted">Contato</a></li>
-                        <li><a href="../login.html" class="text-muted">Entrar</a></li>
+                        <li class="mb-2"><a href="{{url_for('inicio')}}" class="text-muted">Início</a></li>
+                        <li class="mb-2"><a href="{url_for('precos')}" class="text-muted">Planos e Preços</a></li>
+                        <li class="mb-2"><a href="{{url_for('equipe')}}" class="text-muted">Nossa Equipe</a></li>
+                        <li class="mb-2"><a href="{{url_for('contact')}}" class="text-muted">Contato</a></li>
+                        <li><a href="{{url_for('login')}}" class="text-muted">Entrar</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4 mb-lg-0">

@@ -12,14 +12,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40">
+            <a class="navbar-brand" href="{{url_for('inicio')}}">
+                <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,20 +27,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Início</a>
+                        <a class="nav-link" href="{{url_for('inicio')}}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Planos e Preços</a>
+                        <a class="nav-link" href="{{url_for('precos')}}">Planos e Preços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="team.html">Nossa Equipe</a>
+                        <a class="nav-link" href="{{url_for('equipe')}}">Nossa Equipe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contato</a>
+                        <a class="nav-link active" href="{{url_for('contact')}}">Contato</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="../login.html" class="btn btn-primary">Entrar</a>
+                    <a href="{{url_for('login')}}" class="btn btn-primary">Entrar</a>
                 </div>
             </div>
         </div>
@@ -254,8 +254,8 @@
                     <h2 class="fw-bold mb-4">Pronto para revolucionar sua produção agrícola?</h2>
                     <p class="lead mb-4">Junte-se a milhares de produtores que já estão otimizando suas lavouras com o TurboAgro.</p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a href="pricing.html" class="btn btn-light btn-lg px-4 me-sm-3">Ver Planos</a>
-                        <a href="../login.html" class="btn btn-outline-light btn-lg px-4">Acessar Sistema</a>
+                        <a href="{{url_for('precos')}}" class="btn btn-light btn-lg px-4 me-sm-3">Ver Planos</a>
+                        <a href="{{url_for('login')}}" class="btn btn-outline-light btn-lg px-4">Acessar Sistema</a>
                     </div>
                 </div>
             </div>
@@ -267,7 +267,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-4 mb-lg-0">
-                    <img src="img/logo.jpeg" alt="TurboAgro Logo" height="40" class="mb-3">
+                    <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40" class="mb-3">
                     <p class="text-muted">Análise de solo inteligente para otimizar sua produção de café, pimenta e cacau.</p>
                     <div class="social-icons">
                         <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
@@ -279,11 +279,11 @@
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-muted">Início</a></li>
-                        <li class="mb-2"><a href="pricing.html" class="text-muted">Planos e Preços</a></li>
-                        <li class="mb-2"><a href="team.html" class="text-muted">Nossa Equipe</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted">Contato</a></li>
-                        <li><a href="../login.html" class="text-muted">Entrar</a></li>
+                        <li class="mb-2"><a href="{{url_for('inicio')}}" class="text-muted">Início</a></li>
+                        <li class="mb-2"><a href="{{url_for('precos')}}" class="text-muted">Planos e Preços</a></li>
+                        <li class="mb-2"><a href="{{url_for('equipe')}}" class="text-muted">Nossa Equipe</a></li>
+                        <li class="mb-2"><a href="{{url_for('contact')}}" class="text-muted">Contato</a></li>
+                        <li><a href="{{url_for('login')}}" class="text-muted">Entrar</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4 mb-lg-0">
