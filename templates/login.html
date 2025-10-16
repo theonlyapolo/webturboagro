@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
         body {
     background-color: #f8f9fa;
@@ -85,12 +85,12 @@
     <div class="login-container">
         <div class="card login-card">
             <div class="login-header">
-                <img src="public/img/logo.jpeg" alt="TurboAgro Logo" class="img-fluid">
+                <img src="{{url_for('static', filename='public/img/logo.jpeg')}}" alt="TurboAgro Logo" class="img-fluid">
                 <h4>Bem-vindo ao TurboAgro</h4>
                 <p class="mb-0">Análise de solo inteligente para sua lavoura</p>
             </div>
             <div class="login-body">
-                <form action="index.html" method="GET">
+                <form action="{{url_for('index')}}" method="GET">
                     <div class="form-floating">
                         <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com" required>
                         <label for="floatingInput">E-mail</label>
@@ -112,17 +112,17 @@
                 </form>
             </div>
             <div class="login-footer">
-                <p class="mb-1">Não tem uma conta? <a href="public/contact.html">Solicite acesso</a></p>
+                <p class="mb-1">Não tem uma conta? <a href="{{url_for('contact')}}">Solicite acesso</a></p>
                 <p class="text-muted mb-0">&copy; 2025 TurboAgro. Todos os direitos reservados.</p>
             </div>
         </div>
         
         <!-- Links para área pública -->
         <div class="public-links">
-            <a href="public/index.html">Início</a>
-            <a href="public/pricing.html">Planos e Preços</a>
-            <a href="public/team.html">Nossa Equipe</a>
-            <a href="public/contact.html">Contato</a>
+            <a href="{{url_for('inicio')}}">Início</a>
+            <a href="{{url_for('precos')}}">Planos e Preços</a>
+            <a href="{{url_for('equipe')}}">Nossa Equipe</a>
+            <a href="{{url_for('contact')}}">Contato</a>
         </div>
         
         <!-- Recursos adicionais -->

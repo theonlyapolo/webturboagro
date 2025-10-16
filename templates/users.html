@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
     <div class="container-fluid">
@@ -21,28 +21,28 @@
             <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
                 <div class="sidebar-sticky">
                     <div class="sidebar-brand">
-                        <a href="/index.html">
-                            <img src="/img/logo.jpeg" alt="TurboAgro Logo" class="img-fluid">
+                        <a href="{{url_for('index')}}">
+                            <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" class="img-fluid">
                         </a>
                     </div>
                     <ul class="nav flex-column mt-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html">
+                            <a class="nav-link" href="{{url_for('index')}}">
                                 <i class="bi bi-speedometer2"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/pages/users/index.html">
+                            <a class="nav-link active" href="{{url_for('users')}}">
                                 <i class="bi bi-people"></i> Gestão de Usuários
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/team/index.html">
+                            <a class="nav-link" href="{{url_for('team')}}">
                                 <i class="bi bi-person-badge"></i> Nossa Equipe
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/pricing/index.html">
+                            <a class="nav-link" href="{{url_for()}}">
                                 <i class="bi bi-credit-card"></i> Planos e Preços
                             </a>
                         </li>

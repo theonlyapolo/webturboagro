@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
     <div class="container-fluid">
@@ -21,23 +21,23 @@
             <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
                 <div class="sidebar-sticky">
                     <div class="sidebar-brand">
-                        <a href="/index.html">
-                            <img src="/img/logo.jpeg" alt="TurboAgro Logo" class="img-fluid">
+                        <a href="{{url_for('index')}}">
+                            <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" class="img-fluid">
                         </a>
                     </div>
                     <ul class="nav flex-column mt-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html">
+                            <a class="nav-link" href="{{url_for('index')}}">
                                 <i class="bi bi-speedometer2"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/users/index.html">
+                            <a class="nav-link" href="{{url_for('users')}}">
                                 <i class="bi bi-people"></i> Gestão de Usuários
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/pages/team/index.html">
+                            <a class="nav-link active" href="{{url_for('team')}}">
                                 <i class="bi bi-person-badge"></i> Nossa Equipe
                             </a>
                         </li>
@@ -88,11 +88,11 @@
                         </div>
                         <div class="dropdown ms-3">
                             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="/img/alice.jpg" class="rounded-circle me-2 nav-avatar" alt="Avatar">
+                                <img src="{{url_for('static', filename='img/alice.jpg')}}" class="rounded-circle me-2 nav-avatar" alt="Avatar">
                                 <span>Alice Guimarães</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="../profile/index.html">Meu Perfil</a></li>
+                                <li><a class="dropdown-item" href="{{url_for('profile')}}">Meu Perfil</a></li>
                                 <li><a class="dropdown-item" href="#">Configurações</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
@@ -118,7 +118,7 @@
                                 <p>Com anos de experiência no setor agrícola e tecnológico, desenvolvemos a tecnologia microfluidica que permite análises em apenas 2 minutos, ajudando produtores a tomarem decisões mais informadas para suas lavouras.</p>
                             </div>
                             <div class="col-md-6 text-center">
-                                <img src="../../img/microfluidic.png" alt="Tecnologia Microfluidica" class="img-fluid rounded" style="max-height: 250px;">
+                                <img src="{{url_for('static', filename='img/microfluidic.png')}}" alt="Tecnologia Microfluidica" class="img-fluid rounded" style="max-height: 250px;">
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                     <div class="col-md-4">
                         <div class="card team-member">
                             <div class="card-body text-center">
-                                <img src="/img/apolo.jpg" alt="Apolo" class="mb-3">
+                                <img src="{{url_for('static', filename='img/apolo.jpg')}}" alt="Apolo" class="mb-3">
                                 <h4>Apolo</h4>
                                 <p class="text-muted">Desenvolvedor de Software</p>
                                 <p>Desenvolvedor Backend com domínio intermediário em Frontend. Sua principal linguagem é Python, mas atualmente Está expandindo seus conhecimentos com C#. Tem como foco o desenvolvimento de softwares, com uma base sólida em desenvolvimento web. Um dos seus maiores diferenciais é a facilidade em ler códigos como se fossem livros, o que ajuda a compreender e solucionar problemas com rapidez e eficiência.</p>
@@ -147,7 +147,7 @@
                     <div class="col-md-4">
                         <div class="card team-member">
                             <div class="card-body text-center">
-                                <img src="/img/alice.jpg" alt="Alice" class="mb-3">
+                                <img src="{{url_for('static', filename='img/alice.jpg')}}" alt="Alice" class="mb-3">
                                 <h4>Alice</h4>
                                 <p class="text-muted">Desenhista Cadista</p>
                                 <p>Domínio em Desenho Técnico e Resistência dos Materiais. Um dos seus maiores diferenciais é a sua lucidez quando se trata de resolução de problemas e a facilidade no domínio de conteúdo, o que torna os problemas mais claros, objetivos e solucionáveis.</p>
@@ -164,7 +164,7 @@
                     <div class="col-md-4">
                         <div class="card team-member">
                             <div class="card-body text-center">
-                                <img src="/img/leonardo.jpg" alt="Leonardo" class="mb-3">
+                                <img src="{{url_for('static', filename='img/leonardo.jpg')}}" alt="Leonardo" class="mb-3">
                                 <h4>Leonardo</h4>
                                 <p class="text-muted">Gerente de Produto</p>
                                 <p>Tem experiência na área de fabricação mecânica, com atuação em montagem e alinhamento de conjuntos rotativos, soldagem industrial, além de conhecimentos em sistemas hidráulicos e pneumáticos. Sua especialidade é o planejamento e controle da manutenção, sempre buscando eficiência, segurança e confiabilidade nos processos industriais.</p>
@@ -287,6 +287,6 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="../../js/main.js"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
 </body>
 </html>
