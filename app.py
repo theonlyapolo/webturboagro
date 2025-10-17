@@ -44,4 +44,4 @@ def equipe():
     return render_template('public/team.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
