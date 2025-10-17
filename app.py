@@ -5,7 +5,7 @@ app.config['SECRET_KEY'] = 'turboagro-secret-key'
 
 @app.route('/')
 def index():
-    return render_template('public/index.html')
+    return render_template('inicio.html')
 
 @app.route('/login')
 def login():
@@ -29,7 +29,7 @@ def team():
 
 @app.route('/contact')
 def contact():
-    return render_template('public/contact.html')
+    return render_template('contact.html')
 
 @app.route('/inicio')
 def inicio():
@@ -37,11 +37,11 @@ def inicio():
 
 @app.route('/precos')
 def precos():
-    return render_template('public/pricing.html')
+    return render_template('precos.html')
 
 @app.route('/equipe')
 def equipe():
-    return render_template('public/team.html')
+    return render_template('equipe.html')
 
 if __name__ == '__main__':
     app.run()
