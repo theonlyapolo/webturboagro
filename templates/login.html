@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - TurboAgro</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.jpeg') }}">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +91,7 @@
                 <p class="mb-0">Análise de solo inteligente para sua lavoura</p>
             </div>
             <div class="login-body">
-                <form action="{{url_for('index')}}" method="GET">
+                <form action="{{url_for('inicio')}}" method="GET">
                     <div class="form-floating">
                         <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com" required>
                         <label for="floatingInput">E-mail</label>
@@ -119,7 +120,7 @@
         
         <!-- Links para área pública -->
         <div class="public-links">
-            <a href="{{url_for('inicio')}}">Início</a>
+            <a href="{{url_for('index')}}">Início</a>
             <a href="{{url_for('precos')}}">Planos e Preços</a>
             <a href="{{url_for('equipe')}}">Nossa Equipe</a>
             <a href="{{url_for('contact')}}">Contato</a>
@@ -152,5 +153,25 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // impede o envio real do formulário
+
+    const email = document.getElementById("floatingInput").value.trim();
+    const senha = document.getElementById("floatingPassword").value.trim();
+
+    const emailCorreto = "alice.guim@gmail.com";
+    const senhaCorreta = "turboagroempresa";
+
+    if (email === emailCorreto && senha === senhaCorreta) {
+        alert("Login realizado com sucesso!");
+        // Redireciona para a página inicial (ajuste se quiser outro destino)
+        window.location.href = "{{ url_for('inicio') }}";
+    } else {
+        alert("E-mail ou senha incorretos. Tente novamente.");
+    }
+});
+</script>
+
 </body>
 </html>

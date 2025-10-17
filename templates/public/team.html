@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossa Equipe - TurboAgro</title>
-    
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.jpeg') }}">
+        
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -18,7 +19,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{url_for('inicio')}}">
+            <a class="navbar-brand" href="{{url_for('index')}}">
                 <img src="{{url_for('static', filename='img/logo.jpeg')}}" alt="TurboAgro Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url_for('inicio')}}">Início</a>
+                        <a class="nav-link" href="{{url_for('index')}}">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('precos')}}">Planos e Preços</a>
@@ -209,7 +210,7 @@
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{{url_for('inicio')}}" class="text-muted">Início</a></li>
+                        <li class="mb-2"><a href="{{url_for('index')}}" class="text-muted">Início</a></li>
                         <li class="mb-2"><a href="{url_for('precos')}" class="text-muted">Planos e Preços</a></li>
                         <li class="mb-2"><a href="{{url_for('equipe')}}" class="text-muted">Nossa Equipe</a></li>
                         <li class="mb-2"><a href="{{url_for('contact')}}" class="text-muted">Contato</a></li>
